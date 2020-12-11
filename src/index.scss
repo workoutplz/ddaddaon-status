@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,300,400,500,700,900&display=swap');
+
+@import "./variables";
+
+* {
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+body {
+  height: 100vh;
+  margin: 0;
+  /*background-color: #352256;*/
+  background-image: radial-gradient( circle 732px at 96.2% 89.9%, #FF6F61 0%, #FF8856 92% );
+  background-attachment: fixed;
+}
+
+.btn {
+  border-radius: 5px;
+  &:active, &:focus {
+    outline: none;
+    box-shadow: none;
+  }
+}
+
+.bg-transparent {
+  background-color: transparent !important;
+}
+
+.bg-primary {
+  background-color: $primary-color !important;
+}
+
+.btn-primary {
+  background-color: $primary-color !important;
+  border-color: $primary-color !important;
+  color: #ffffff !important;
+}
+
+.text-purple {
+  color: $primary-color !important;
+}
+
+.canvas-wrapper {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1000;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.hoverable {
+  * {
+    transition: all .3s ease;
+  }
+  &:hover {
+    * {
+      transform: scale(1.1);
+    }
+  }
+}
